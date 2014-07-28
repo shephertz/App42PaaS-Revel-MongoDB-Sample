@@ -1,0 +1,28 @@
+{{set . "title" "Home"}}
+{{template "header.html" .}}
+
+    <div class="App42PaaS_body_wrapper">
+      <div class="App42PaaS_body">
+        <div class="App42PaaS_body_inner">
+          <table>
+						<tr>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Description</th>
+						</tr>
+						{{ range $element := .users }}
+						<tr>
+							<td>{{$element.Name}}</td>
+							<td>{{$element.Email}}</td>
+							<td>{{$element.Description}}</td>
+						</tr>
+					 {{ end }}
+					</table>
+
+					<a href="/">New User</a>
+        </div>
+      </div>
+   	</div>  
+  </body>
+</html> 
+
